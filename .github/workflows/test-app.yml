@@ -2,7 +2,7 @@ name: Cypress Test
 on: [push]
 
 jobs:
-  cypress-run:
+  build_and_preview:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
