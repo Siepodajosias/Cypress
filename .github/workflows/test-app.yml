@@ -1,5 +1,9 @@
 name: Cypress Test
-on: [push]
+on:
+  push:
+    branches:
+    - main
+    - release/*
 
 jobs:
   build_and_preview:
