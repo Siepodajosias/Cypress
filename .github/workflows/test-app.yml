@@ -11,6 +11,7 @@ jobs:
         with:
           build: npm run build
           start: npm start
+          wait-on: 'https://cloud.cypress.io/'
           record: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
