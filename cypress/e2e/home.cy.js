@@ -26,30 +26,30 @@ describe("Home page",() => {
           cy.location("pathname").should("eq", "/testing-your-first-application");
           cy.get('a[data-test="next-lesson-button"]').click();
           cy.location('pathname').should("eq","/testing-your-first-application/app-install-and-overview");
-          cy.get('#answer-0').click();
+          cy.getByData2().click();
           cy.get('a[href="installing-cypress-and-writing-our-first-test"]').click();
           cy.location('pathname').should("eq","/testing-your-first-application/installing-cypress-and-writing-our-first-test");
-          cy.get('#answer-0').click();
+          cy.getByData2().click();
           cy.get('a[href="setting-up-data-before-each-test"]').click();
           cy.location('pathname').should("eq","/testing-your-first-application/setting-up-data-before-each-test");
-          cy.get('#answer-0').click();
+          cy.getByData2().click();
           cy.get('div[data-test="next-lesson-button"] a').click();
           cy.get("h1").contains("Testing Next.js Applications with Cypress");
           
         })
   
         it("Course: Testing Foundations", () => {
-          cy.get('div[data-test="course-1"]').find('a').eq(3).click();
+          cy.getByData("course-1").find('a').eq(3).click();
           cy.location("pathname").should("eq", "/testing-foundations");
-          cy.get('a[data-test="next-lesson-button"]').click();
+          cy.getByData("next-lesson-button").click();
           cy.location('pathname').should("eq","/testing-foundations/testing-is-a-mindset");
-          cy.get("#answer-0").click();
+          cy.getByData2().click();
           cy.get('a[href="knowing-what-to-test"]').click();
           cy.url().should("include","/testing-foundations/knowing-what-to-test");
-          cy.get("#answer-0").click();
+          cy.getByData2().click();
           cy.get('a[href="manual-vs-automated-testing"]').click();
           cy.url().should("include","/testing-foundations/manual-vs-automated-testing");
-          cy.get("#answer-0").click();
+          cy.getByData2().click();
           cy.get('div[data-test="next-lesson-button"] a').click();
           cy.get("h1").contains("Testing Next.js Applications with Cypress");
         })
